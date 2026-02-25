@@ -1,0 +1,13 @@
+
+rl_control:
+  state_dim: 100
+  action_dim: 2
+  action_scale: [1.0, 1.0]
+  rate: 10
+occupancy_grid:
+  topic: /occupancy_grid
+  frame_id: map
+  resolution: 0.05
+  rate: 10
+  height: 128
+  width: 128

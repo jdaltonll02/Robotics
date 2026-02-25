@@ -1,0 +1,17 @@
+# Core Python dependencies for Robotics Research System
+numpy
+scipy
+matplotlib
+PyYAML
+opencv-python
+scikit-learn
+torch
+torchvision
+tensorboard
+rospy
+rosbag
+catkin_pkg
+cv_bridge
+sensor_msgs
+geometry_msgs
+nav_msgs

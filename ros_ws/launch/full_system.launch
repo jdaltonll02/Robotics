@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="perception" type="perception_node.py" name="perception_node" output="screen" args="_config:=../../config.yaml" />
+  <node pkg="planning" type="astar_planner.py" name="astar_planner" output="screen" args="_config:=../../config.yaml" />
+  <node pkg="control" type="rl_control_node.py" name="rl_control_node" output="screen" args="_config:=../../config.yaml" />
+</launch>
