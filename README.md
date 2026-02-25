@@ -5,15 +5,16 @@ This repository implements a full end-to-end autonomous robotics system using RO
 
 ## Architecture Overview
 
+
 ```mermaid
-graph TD
-	A[CoppeliaSim (Physics & Sensors)] -->|/camera, /odom| B[ROS Sensor Topics]
-	B --> C[Perception Layer (CNN, PyTorch)]
-	C -->|/occupancy_grid| D[World Representation Layer]
-	D -->|/occupancy_grid| E[Planning Layer (A*, Hybrid A*)]
-	E -->|/planned_path| F[Control Layer (PPO/PPO-CNN)]
-	F -->|/cmd_vel| G[ROS Control Topics]
-	G --> H[Robot Actuation]
+graph TD;
+	A[CoppeliaSim (Physics & Sensors)] -- /camera, /odom --> B[ROS Sensor Topics];
+	B --> C[Perception Layer (CNN, PyTorch)];
+	C -- /occupancy_grid --> D[World Representation Layer];
+	D -- /occupancy_grid --> E[Planning Layer (A*, Hybrid A*)];
+	E -- /planned_path --> F[Control Layer (PPO/PPO-CNN)];
+	F -- /cmd_vel --> G[ROS Control Topics];
+	G --> H[Robot Actuation];
 ```
 
 All interfaces are formally documented in `INTERFACES.md`.
