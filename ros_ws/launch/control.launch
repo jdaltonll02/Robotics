@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="control" type="rl_control_node.py" name="rl_control_node" output="screen" />
+</launch>
